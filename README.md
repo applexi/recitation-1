@@ -1,7 +1,7 @@
 Recitation 1: CodeQL
 ====================
 
-[CodeQL](https://semmle.com/codeql) is a structured query language for syntax-directed analysis. CodeQL allows us to ask questions about a project's abstract syntax tree and find patterns/bugs. CodeQL compiles code and builds a database of information that can be queried (e.g., variables, types, functions, dataflow) and combined to build up an analysis. We first have to create or import a CodeQL database to query a specific project.
+[CodeQL](https://codeql.github.com/) is a structured query language for syntax-directed analysis. CodeQL allows us to ask questions about a project's abstract syntax tree and find patterns/bugs. CodeQL compiles code and builds a database of information that can be queried (e.g., variables, types, functions, dataflow) and combined to build up an analysis. We first have to create or import a CodeQL database to query a specific project.
 
 Recitation Goals:
 
@@ -11,9 +11,14 @@ In this recitation, we will:
 2. Get an overview of how a query works and how to navigate the interface.
 3. Learn how to write simple analyses targeting JavaScript.
 
+## Hand-in Instructions ##
+Submit via the Gradescope online assignment for Recitation 1: https://www.gradescope.com/courses/1103580/assignments/6601571/
+
+For each query that you write/run, jot down the number of results, as you will submit these to Gradescope.
+
 Setup:
 ------
-1. Open this repository using **GitHub Codespaces** by pressing "," on your keyboard. A dialogue may say "This folder contains a workspace file ... <snip> ... Do you want to open it?" Click "Open Workspace".  You may receive a warning from the Git extension of too many active changes in the codeql submodule; you can ignore this warning, especially since you won't turn in this git repository. You may need to wait a couple minutes for everything to get set up properly. 
+1. Open this repository using **GitHub Codespaces** by pressing "," on your keyboard. You may receive a warning from the Git extension of too many active changes in the codeql submodule; you can ignore this warning, especially since you won't turn in this git repository. You will need to wait a couple minutes for everything to get set up properly. 
 2. Open the QL Tab on the sidebar of Visual Studio Code and click **"Add a CodeQL database From GitHub"**. Download `meteor/meteor` (https://github.com/meteor/meteor) CodeQL database.
 
 
@@ -83,8 +88,7 @@ comma-delimited list of values you'd like to inspect.
 
 Example Query 3, "Functions without return statements":
 -------------------------------------------------------
-Load the "Functions without return statements" example. You should get this
-code:
+In javascript-queries/ create a new file **ex3.ql** with the following code:
 
 ```
 import javascript
