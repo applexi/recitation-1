@@ -1,0 +1,16 @@
+{
+  "name": "CodeQL Environment",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.vscode-codeql",
+        "slevesque.vscode-zipexplorer"
+      ],
+      "settings": {
+        "codeQL.runningQueries.memory": 4096,
+        "codeQL.runningTests.memory": 4096
+      }
+    }
+  },
+  "postCreateCommand": "git submodule init && git submodule update --recursive",
+}
